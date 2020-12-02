@@ -5,8 +5,8 @@ var num2 = [2, 4, 6, 8]
 var specials = ["!", "@", "#", "$", "*"];
 var let1 = "abcdefghijklm";
 var let2 = "nopqrstuvwxyz";
-var passParts1 = (num2 + specials + let1 + num1 + let2);
-var passParts2 = (num1 + specials + let1 + num2 + let2);
+var passParts1 = (num2, specials, let1, num1, let2);
+var passParts2 = (num1, specials, let1, num2, let2);
 //generateBtnonclick: alert("Would you like to create a password");
 
 
@@ -29,9 +29,15 @@ if (numConfim === true) {
 if (letUpConfirm === true){
   var specConfirm = confirm("Would you like Special Characters")
 }
-
-
-console.log()
+//var makePassword= (passParts1, passParts2); {
+  ////return makePassword;
+//}
+var makePassword = "";
+for (var i = 0; i < 9; i++) {
+  var random = Math.floor(Math.random() * 10);
+  makePassword = random + let1 + num1+ specials;
+}
+console.log(makePassword);
 
 
 
